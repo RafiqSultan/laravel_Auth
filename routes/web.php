@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('/log', function () {
+//     return view('admin.login');
+// });
+
+Route::get('/login',[AuthController::class,'login']);
+Route::post('/main-home',[AuthController::class,'home'])->name('main-home');
