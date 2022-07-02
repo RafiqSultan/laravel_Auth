@@ -23,3 +23,6 @@ Route::get('/', function () {
 
 Route::get('/login',[AuthController::class,'login']);
 Route::post('/main-home',[AuthController::class,'home'])->name('main-home');
+
+Route::get('/register',[AuthController::class,'register']);
+Route::post('/user-home',[AuthController::class,'userHome'])->name('user-home');
