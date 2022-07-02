@@ -142,6 +142,10 @@
               <label for="email" class="form-label">Email or Username</label>
               <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your email or username" autofocus>
             </div>
+            @error('email-username')
+              <span class="alert alert-danger">{{ $message}}</span>
+            @enderror
+
             <div class="mb-3 form-password-toggle">
               <div class="d-flex justify-content-between">
                 <label class="form-label" for="password">Password</label>
@@ -154,6 +158,9 @@
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
+            @error('password')
+              <span class="alert alert-danger">{{ $message}}</span>
+            @enderror
             <div class="mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember-me">
